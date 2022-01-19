@@ -29,12 +29,12 @@ trait Auditable
             'updated' => $model->getChanges() ?? null,
         ]);
         AuditLog::create([
-            'description'  => $description,
-            'subject_id'   => $model->id ?? null,
+            'description' => $description,
+            'subject_id' => $model->id ?? null,
             'subject_type' => get_class($model) ?? null,
-            'user_id'      => auth()->id() ?? null,
-            'properties'   => $properties ?? null,
-            'host'         => request()->ip() ?? null,
+            'user_id' => auth()->id() ?? null,
+            'properties' => $properties ?? null,
+            'host' => request()->ip() ?? null,
         ]);
     }
 
@@ -45,12 +45,12 @@ trait Auditable
             'updated' => $model->getChanges(),
         ]);
         AuditLog::create([
-            'description'  => $description,
-            'subject_id'   => $model->id ?? null,
+            'description' => $description,
+            'subject_id' => $model->id ?? null,
             'subject_type' => get_class($model) ?? null,
-            'user_id'      => auth()->id() ?? null,
-            'properties'   => $properties ?? null,
-            'host'         => request()->ip() ?? null,
+            'user_id' => auth()->id() ?? null,
+            'properties' => $properties ?? null,
+            'host' => request()->ip() ?? null,
         ]);
     }
 }

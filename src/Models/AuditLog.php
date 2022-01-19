@@ -2,8 +2,8 @@
 
 namespace zoparga\AuditLog\Models;
 
+use DateTimeInterface;
 use Illuminate\Database\Eloquent\Model;
-use \DateTimeInterface;
 
 class AuditLog extends Model
 {
